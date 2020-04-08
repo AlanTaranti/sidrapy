@@ -24,7 +24,7 @@ setup(
     keywords='ibge, sidra, api',
     include_package_data=True,
     zip_safe=False,
-    install_requires=['requests'],
+    install_requires=['requests', 'pandas'],
     classifiers=[
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
