@@ -3,7 +3,6 @@
 [![Version](https://img.shields.io/pypi/v/sidrapy.svg?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![Python Version](https://img.shields.io/pypi/pyversions/sidrapy?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
-[![Build](https://travis-ci.org/AlanTaranti/Sidrapy.svg?branch=master)](https://travis-ci.org/AlanTaranti/Sidrapy)
 
 ## What is this project?
 
