@@ -32,6 +32,9 @@ Let's assume that we want the IPCA from Brazil from last 12 months.
     data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
 
 
+### Where is the SIDRA API Documentation?
+Here: http://api.sidra.ibge.gov.br/home/ajuda
+
 ## How I get in touch?
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
 * Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
