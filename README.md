@@ -1,6 +1,7 @@
 # Sidrapy
 
 [![Version](https://img.shields.io/pypi/v/sidrapy.svg?style=flat)](https://pypi.python.org/pypi/sidrapy)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/sidrapy)](https://pypi.python.org/pypi/sidrapy)
 [![Python Version](https://img.shields.io/pypi/pyversions/sidrapy?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
