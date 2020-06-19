@@ -1,2 +1,4 @@
-from .sdk import VERSION
 from .table import get_table
+
+
+VERSION = "0.1.1"
