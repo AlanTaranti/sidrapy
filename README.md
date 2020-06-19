@@ -1,4 +1,4 @@
-# Sidrapy
+# sidrapy
 
 [![Version](https://img.shields.io/pypi/v/sidrapy.svg?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/sidrapy)](https://pypi.python.org/pypi/sidrapy)
@@ -8,13 +8,14 @@
 
 ## What is this project?
 
-It is a library that provides a python interface for the IBGE SIDRA API.
+It is a library that provides a python interface for the Brazilian Institute of Geography and Statistics (IBGE) [SIDRA API](http://api.sidra.ibge.gov.br/).
+
+Sidrapy allows you to access data about housing, inflation, industries and many more in Brazil; easily in Python.
 
 
 ## Requirements
 
 - Python 3.5+
-- Linux, Windows, Mac OSX or BSD
 
 ## How to install and use this project? 
 
@@ -36,6 +37,6 @@ data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territor
 ### Where is the SIDRA API Documentation?
 Here: http://api.sidra.ibge.gov.br/home/ajuda
 
-## How I get in touch?
+## How do I get in touch?
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
 * Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
