@@ -644,3 +644,6 @@ MigrationBackup/
 venv/
 .env
 activate
+
+# temporary files
+*.swp
