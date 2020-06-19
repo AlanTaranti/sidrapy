@@ -1,10 +1,14 @@
 import requests
 
+
 ENDPOINT_BASE = "https://apisidra.ibge.gov.br"
 
 
-def get_url(table_code: str, territorial_level: str, ibge_territorial_code: str, variable: str = None,
-            classification: str = None, categories: str = None, period: str = None, header: str = None):
+def get_url(
+        table_code: str, territorial_level: str, ibge_territorial_code: str,
+        variable: str = None, classification: str = None,
+        categories: str = None, period: str = None, header: str = None):
+
     query_url = ENDPOINT_BASE + "/values"
 
     query_url += "/t/{}".format(table_code)
@@ -29,10 +33,13 @@ def get_url(table_code: str, territorial_level: str, ibge_territorial_code: str,
     return query_url
 
 
-def get(table_code: str, territorial_level: str, ibge_territorial_code: str, variable: str = None,
-        classification: str = None, categories: str = None, period: str = None, header: str = None):
-    url = get_url(table_code, territorial_level, ibge_territorial_code, variable, classification, categories, period,
-                  header)
+def get(
+        table_code: str, territorial_level: str, ibge_territorial_code: str,
+        variable: str = None, classification: str = None,
+        categories: str = None, period: str = None, header: str = None):
+
+    url = get_url(table_code, territorial_level, ibge_territorial_code,
+                  variable, classification, categories, period, header)
 
     response = requests.get(url)
 
