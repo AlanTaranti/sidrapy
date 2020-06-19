@@ -638,3 +638,9 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/linux,macos,python,windows,pycharm,vagrant,visualstudio,visualstudiocode
+
+# venv
+.venv/
+venv/
+.env
+activate
