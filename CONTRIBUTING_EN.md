@@ -95,7 +95,9 @@ Run the basic test suite with pytest.
 ```shell script
 $ pytest
 ```
-This runs the tests for the current environment, which is usually sufficient. CI will run the full suite when you submit your pull request. You can run the full test suite with tox if you don't want to wait.
+This runs the tests for the current environment, which is usually sufficient. CI will run the full suite when you submit your pull request.
+
+You can run the full test suite with tox if you don't want to wait.
 ```shell script
 $ tox
 ```
