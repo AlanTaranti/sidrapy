@@ -39,6 +39,9 @@ data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territor
 ### Where is the SIDRA API Documentation?
 Here: http://api.sidra.ibge.gov.br/home/ajuda
 
+### Contributing
+For guidance on setting up a development environment and how to make a contribution to sidrapy, see the [contributing guidelines](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
+
 ## How do I get in touch?
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
 * Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
