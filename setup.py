@@ -7,14 +7,14 @@ description = 'sidrapy'
 with open("README.md") as f:
     long_description = f.read()
 
-autor = 'Alan Taranti'
-autor_email = 'alan.taranti@gmail.com'
+maintainer = 'Alan Taranti'
+maintainer_email = 'alan.taranti@gmail.com'
 
 setup(
     name='sidrapy',
     version=VERSION,
-    author=autor,
-    author_email=autor_email,
+    maintainer=maintainer,
+    maintainer_email=maintainer_email,
     packages=find_packages(),
     license='MIT',
     description=description,
