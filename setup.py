@@ -29,15 +29,18 @@ setup(
     python_requires=">={}".format(oldest_supported_python_3_version),
     install_requires=['requests', 'pandas'],
     classifiers=[
-        'Intended Audience :: Developers',
-        'Intended Audience :: System Administrators',
-        'Operating System :: OS Independent',
-        'Topic :: Software Development',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: Portuguese (Brazilian)',
+        'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'License :: OSI Approved :: MIT License',
+        'Topic :: Scientific/Engineering',
     ]
 )
