@@ -6,29 +6,42 @@
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 
-## What is this project?
+## O que é esse projeto? / _What is this project?_
 
-It is a library that provides a python interface for the Brazilian Institute of Geography and Statistics (IBGE) [SIDRA API](http://api.sidra.ibge.gov.br/).
+É uma biblioteca que oferece uma interface em python para a [API SIDRA](http://api.sidra.ibge.gov.br/) do Instituto Brasileiro de Geografia e Estatística (IBGE)
 
-Sidrapy allows you to access data about housing, inflation, industries and many more in Brazil; easily in Python.
+O sidrapy permite acessar facilmente em Python dados sobre habitação, inflação, industrias e muito mais.
+
+_It is a library that provides a python interface for the Brazilian Institute of Geography and Statistics (IBGE) [SIDRA API](http://api.sidra.ibge.gov.br/)._
+
+_Sidrapy allows you to access data about housing, inflation, industries and many more in Brazil; easily in Python._
 
 
-## Supported Python Versions
+## Versões Python Suportadas / _Supported Python Versions_
 
-All officially supported Python 3 versions. Currently:
+Todas as versões do Python 3 oficialmente suportadas. Atualmente:
 - Python 3.5+
 
-## How to install and use this project? 
+_All officially supported Python 3 versions. Currently:_
+- _Python 3.5+_
 
-### Installation
-Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
+## Como instalar e utilizar esse projeto? / _How to install and use this project?_ 
 
-    pip install -U sidrapy
+### Instalação / _Installation_
+Instale e atualize utilizando o [pip](https://pip.pypa.io/en/stable/quickstart/) (inglês):
+```shell script
+pip install -U sidrapy
+```
 
-### Quick Start
+_Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):_
+```shell script
+pip install -U sidrapy
+```
 
-Here is an example of how to use this library.
-Let's assume that we want the IPCA from Brazil from last 12 months.
+### Início Rápido / _Quick Start_
+
+Aqui um exemplo de como utilizar essa biblioteca.
+Digamos que desejamos os dados do IPCA dos ultimos 12 meses.
 
 ```python
 import sidrapy
@@ -36,16 +49,29 @@ import sidrapy
 data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
 ```
 
-### Where is the SIDRA API Documentation?
-Here: http://api.sidra.ibge.gov.br/home/ajuda
+_Here is an example of how to use this library._
+_Let's assume that we want the IPCA from Brazil from last 12 months._
 
-### Contributing
-For guidance on setting up a development environment and how to make a contribution to sidrapy, see the [contributing guidelines](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
+```python
+import sidrapy
 
-## How do I get in touch?
-Support:
-* [Telegram Group](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
+data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
+```
 
-Maintainer:
+### Onde está a documentação da API do SIDRA? / _Where is the SIDRA API documentation?_
+Aqui: http://api.sidra.ibge.gov.br/home/ajuda
+
+_Here: http://api.sidra.ibge.gov.br/home/ajuda_
+
+### Contribuindo / _Contributing_
+Para obter orientações sobre como configurar o ambiente de desenvolvimento e como fazer uma contribuição para o sidrapy, consulte o [guia de contribuição](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
+
+_For guidance on setting up a development environment and how to make a contribution to sidrapy, see the [contributing guidelines](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING_EN.md)._
+
+## Como entrar em contato? / _How do I get in touch?_
+Suporte / _Support:_
+* [Grupo Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
+
+Mantenedor / _Maintainer_:
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
 * Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
