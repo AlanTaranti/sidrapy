@@ -10,9 +10,11 @@ Use nosso grupo no Telegram para perguntas sobre o uso do sidrapy ou dificuldade
 ## Relatando problemas
 Inclua as seguintes informações em sua postagem:
 * Descreva o que você esperava que acontecesse.
-* Se possivel, inclua um [exemplo reprodudível mínimo](https://pt.stackoverflow.com/help/minimal-reproducible-example) para nos ajudar a identificar o problema. Isso também ajuda a verificar se o problema não está no seu próprio código.
+* Se possivel, inclua um [exemplo reprodutível mínimo](https://pt.stackoverflow.com/help/minimal-reproducible-example) para nos ajudar a identificar o problema.
+Isso também ajuda a verificar se o problema não está no seu próprio código.
 * Descreva o que realmente aconteceu. Inclua o rastreamento completo, se houver uma exceção.
-* Liste as versões do seu python e o sidrapy. Se possível, verifique se esse problema já foi corrigido nas versões mais recentes ou no código mais recente no repositório.
+* Liste as versões do seu python e o sidrapy.
+Se possível, verifique se esse problema já foi corrigido nas versões mais recentes ou no código mais recente no repositório.
 
 ## Submetendo correções
 Se não houver uma Issue em aberto para o que você deseja enviar, prefira abrir uma para discussão antes de trabalhar em uma PR.
