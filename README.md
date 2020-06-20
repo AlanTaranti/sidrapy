@@ -25,7 +25,7 @@ Todas as versões do Python 3 oficialmente suportadas. Atualmente:
 _All officially supported Python 3 versions. Currently:_
 - _Python 3.5+_
 
-## Como instalar e utilizar esse projeto? / _How to install and use this project?_ 
+## Como instalar e utilizar esse projeto? / _How to install and use this project?_
 
 ### Instalação / _Installation_
 Instale e atualize utilizando o [pip](https://pip.pypa.io/en/stable/quickstart/) (inglês):
