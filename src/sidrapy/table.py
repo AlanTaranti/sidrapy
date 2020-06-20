@@ -1,5 +1,5 @@
 import pandas as pd
-from src.sidrapy import get
+from .resources import get
 
 
 def get_table(table_code: str, territorial_level: str, ibge_territorial_code: str, variable: str = None,
