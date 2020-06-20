@@ -75,10 +75,10 @@ $ git fetch origin
 $ git checkout -b your-branch-name origin/0.1.x
 ```
 
-* If you're submitting a feature addition or change, branch off of the "master" branch.
+* If you're submitting a feature addition or change, branch off of the "develop" branch.
 ```shell script
 $ git fetch origin
-$ git checkout -b your-branch-name origin/master
+$ git checkout -b your-branch-name origin/develop
 ```
 
 * Using your favorite editor, make your changes, [committing as you go](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html#commit-your-changes).
