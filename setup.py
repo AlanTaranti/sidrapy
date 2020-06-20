@@ -22,7 +22,7 @@ setup(
     description=description,
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/AlanTaranti/Sidrapy',
+    url='https://github.com/AlanTaranti/sidrapy',
     keywords='ibge, sidra, api, brasil, brazil, estatistica, statistics',
     include_package_data=True,
     zip_safe=False,
