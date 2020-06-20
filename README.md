@@ -21,9 +21,10 @@ All officially supported Python 3 versions. Currently:
 ## How to install and use this project? 
 
 ### Installation
-    
-    pip install sidrapy
-    
+Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
+
+    pip install -U sidrapy
+
 ### Quick Start
 
 Here is an example of how to use this library.
