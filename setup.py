@@ -2,10 +2,10 @@
 from setuptools import setup, find_packages
 from sidrapy.sdk import VERSION
 
-descricao = 'Sidrapy'
+description = 'sidrapy'
 
 with open("README.md") as f:
-    descricao_longa = f.read()
+    long_description = f.read()
 
 autor = 'Alan Taranti'
 autor_email = 'alan.taranti@gmail.com'
@@ -17,8 +17,8 @@ setup(
     author_email=autor_email,
     packages=find_packages(),
     license='MIT',
-    description=descricao,
-    long_description=descricao_longa,
+    description=description,
+    long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/AlanTaranti/Sidrapy',
     keywords='ibge, sidra, api',
