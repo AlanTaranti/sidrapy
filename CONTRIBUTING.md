@@ -1,4 +1,4 @@
-# Como contrinuit com o sidrapy
+# Como contribuir com o sidrapy
 Obrigado por considerar contribuir com sidrapy!
 
 ## Suporte
