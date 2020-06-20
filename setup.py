@@ -10,6 +10,8 @@ with open("README.md") as f:
 maintainer = 'Alan Taranti'
 maintainer_email = 'alan.taranti@gmail.com'
 
+oldest_supported_python_3_version = '3.5'
+
 setup(
     name='sidrapy',
     version=VERSION,
@@ -24,6 +26,7 @@ setup(
     keywords='ibge, sidra, api',
     include_package_data=True,
     zip_safe=False,
+    python_requires=">={}".format(oldest_supported_python_3_version),
     install_requires=['requests', 'pandas'],
     classifiers=[
         'Intended Audience :: Developers',
