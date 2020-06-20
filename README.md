@@ -44,7 +44,7 @@ For guidance on setting up a development environment and how to make a contribut
 
 ## How do I get in touch?
 Support:
-* [Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
+* [Telegram Group](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
 
 Maintainer:
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)

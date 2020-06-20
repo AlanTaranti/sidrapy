@@ -5,7 +5,7 @@ Thank you for considering contributing to sidrapy!
 Please, don't use the issue tracker for this.
 The issue tracker is a tool to address bugs and feature requests in sidrapy itself.
 Use our Telegram group for questions about using sidrapy or issues with your own code:
-* [Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
+* [Telegram Group](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
 
 ## Reporting issues
 Include the following information in your post:
