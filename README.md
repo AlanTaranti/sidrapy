@@ -43,6 +43,9 @@ Here: http://api.sidra.ibge.gov.br/home/ajuda
 For guidance on setting up a development environment and how to make a contribution to sidrapy, see the [contributing guidelines](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
 
 ## How do I get in touch?
+Support:
+* [Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
+
 Maintainer:
 * Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
 * Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
