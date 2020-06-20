@@ -7,6 +7,9 @@ description = 'sidrapy'
 with open("README.md") as f:
     long_description = f.read()
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 maintainer = 'Alan Taranti'
 maintainer_email = 'alan.taranti@gmail.com'
 
@@ -27,7 +30,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     python_requires=">={}".format(oldest_supported_python_3_version),
-    install_requires=['requests', 'pandas'],
+    install_requires=requirements,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
