@@ -61,7 +61,7 @@ data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territor
 ### Onde está a documentação da API do SIDRA? / _Where is the SIDRA API documentation?_
 Aqui: http://api.sidra.ibge.gov.br/home/ajuda
 
-_Here: http://api.sidra.ibge.gov.br/home/ajuda_
+_Here: http://api.sidra.ibge.gov.br/home/ajuda (brazilian portuguese)_
 
 ### Contribuindo / _Contributing_
 Para obter orientações sobre como configurar o ambiente de desenvolvimento e como fazer uma contribuição para o sidrapy, consulte o [guia de contribuição](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
