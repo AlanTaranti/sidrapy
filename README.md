@@ -13,8 +13,9 @@ It is a library that provides a python interface for the Brazilian Institute of 
 Sidrapy allows you to access data about housing, inflation, industries and many more in Brazil; easily in Python.
 
 
-## Requirements
+## Supported Python Versions
 
+All officially supported Python 3 versions. Currently:
 - Python 3.5+
 
 ## How to install and use this project? 
