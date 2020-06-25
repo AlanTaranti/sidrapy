@@ -111,12 +111,3 @@ $ coverage html
 ```
 Open htmlcov/index.html in your browser to explore the report.
 Read more about [coverage](https://coverage.readthedocs.io/).
-
-### Building the docs
-Build the docs in the `docs` directory using Sphinx.
-```shell script
-$ cd docs
-$ make html
-```
-Open `_build/html/index.html` in your browser to view the docs.
-Read more about [Sphinx](https://www.sphinx-doc.org/en/stable/).

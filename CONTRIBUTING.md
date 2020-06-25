@@ -121,12 +121,3 @@ $ coverage html
 ```
 Abra o arquivo htmlcov/index.html no seu navegador e explore o relatório.
 Saiba mais sobre o [coverage](https://coverage.readthedocs.io/).
-
-### Construindo a documentação
-Compile a documentação no diretório `docs` usando o Sphinx.
-```shell script
-$ cd docs
-$ make html
-```
-Abra `_build/html/index.html` no seu navegador para visualizar a documentação.
-Saiba mais sobre o [Sphinx](https://www.sphinx-doc.org/en/stable/).
