@@ -68,7 +68,7 @@ No Windows, ativar o virtualenv é diferente.
 $ pip install -e . -r requirements/dev.txt
 ```
 
-* Instale os hooks pre-commit.
+* Opcional: Instale os hooks pre-commit.
 ```shell script
 $ pre-commit install
 ```

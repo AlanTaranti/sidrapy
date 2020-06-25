@@ -62,7 +62,7 @@ On Windows, activating is different.
 $ pip install -e . -r requirements/dev.txt
 ```
 
-* Install the pre-commit hooks.
+* Optional: Install the pre-commit hooks.
 ```shell script
 $ pre-commit install
 ```
