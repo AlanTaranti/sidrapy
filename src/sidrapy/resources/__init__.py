@@ -1,1 +1,1 @@
-from .handler import get
+from .handler import get  # NOQA F401

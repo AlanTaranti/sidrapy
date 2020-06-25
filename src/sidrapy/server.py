@@ -33,13 +33,12 @@ def create_url(path: str):
     return url
 
 
-
 def ping():
     """
     Http get main address and returns the response time in miliseconds
     Note: this is not a true ping with ICMP protocol
     """
-    
+
     start = time.time()
     _ = get(path='/')
     end = time.time()
