@@ -5,6 +5,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/sidrapy?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## O que é esse projeto? / _What is this project?_
 
