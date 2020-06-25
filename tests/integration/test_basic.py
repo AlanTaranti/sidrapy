@@ -4,6 +4,7 @@ import pytest
 import requests
 
 import sidrapy
+import sidrapy.server
 
 
 def test_dumb():
@@ -14,6 +15,13 @@ def test_connection():
     url = sidrapy.resources.handler.ENDPOINT_BASE
     r = requests.get(url, timeout=10)
     assert r.status_code == 200
+
+
+def test_ping():
+    aux = sidrapy.server.ping()
+    assert isinstance(aux, float)
+    assert aux > 0
+    assert aux < 10_000
 
 
 def test_sample_request():
