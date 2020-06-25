@@ -1,9 +1,5 @@
-
-
-import pytest
 import requests
 
-import sidrapy
 import sidrapy.server
 
 
@@ -27,7 +23,7 @@ def test_ping():
 def test_sample_request():
     url = sidrapy.resources.handler.ENDPOINT_BASE
     # api docs here: http://api.sidra.ibge.gov.br/home/ajuda
-    url += '/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y'
+    url += "/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y"
     r = requests.get(url, timeout=10)
     assert r.status_code == 200
     sample_response = (
@@ -67,7 +63,7 @@ def test_sample_request():
 
 
 def test_server_get():
-    path = '/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y'
+    path = "/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y"
     expected_response = (
         '[\r\n  {\r\n    "NC": "Nível Territorial (Código)",\r\n    "NN": '
         '"Nível Territorial",\r\n    "D1C": "Ano (Código)",\r\n    "D1N": '
