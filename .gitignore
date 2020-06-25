@@ -3,6 +3,17 @@
 venv
 .pypirc
 
+## virtual enviroment stuff
+.venv
+activate
+
+## enviroment var file
+.env
+
+## temporary files
+*.swp
+
+
 # Created by https://www.gitignore.io/api/linux,macos,python,windows,pycharm,vagrant,visualstudio,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=linux,macos,python,windows,pycharm,vagrant,visualstudio,visualstudiocode
 
