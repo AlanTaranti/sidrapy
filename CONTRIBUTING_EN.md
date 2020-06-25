@@ -105,7 +105,6 @@ $ tox
 ### Running test coverage
 Generating a report of lines that do not have test coverage can indicate where to start contributing. Run pytest using coverage and generate a report.
 ```shell script
-$ pip install coverage
 $ coverage run -m pytest
 $ coverage html
 ```
