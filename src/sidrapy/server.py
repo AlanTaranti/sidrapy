@@ -40,11 +40,18 @@ def ping():
     Note: this is not a true ping with ICMP protocol
     """
     
-    url = create_url('/')
     start = time.time()
-    r = requests.get(url, timeout=10)
+    _ = get(path='/')
     end = time.time()
+    return (end - start) * 1000
+
+
+def get(path: str):
+    """Gets data from a path"""
+
+    url = create_url(path)
+    r = requests.get(url, timeout=10)
     if r.status_code != 200:
         msg = 'Expected status code 200 but got ' + str(r.status_code)
         raise ConnectionError(msg)
-    return (end - start) * 1000
+    return r.text
