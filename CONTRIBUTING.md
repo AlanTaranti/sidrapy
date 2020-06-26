@@ -107,7 +107,18 @@ $ pytest
 Esse comando executa os testes no ambiente atual, que normalmente é suficiente.
 O CI executará a suite completa de testes quando submeter a pull request.
 
-Você pode executar o conjunto completo de testes com o tox, caso não queira esperar o CI.
+Você pode executar o conjunto completo de testes com o tox, caso não queira esperar o CI:
+
+* Instale o [pyenv](https://github.com/pyenv/pyenv-installer)
+
+* Instale as versões do Python suportadas:
+```shell script
+$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|b|^2|^3\.[0-4])' | tac | sort -u -t'.' -k2,2`
+$ echo $PY_VERSIONS | xargs -n1 pyenv install
+$ pyenv global system $PY_VERSIONS
+```
+
+* Execute o tox:
 ```shell script
 $ tox
 ```

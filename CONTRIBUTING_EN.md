@@ -98,6 +98,16 @@ $ pytest
 This runs the tests for the current environment, which is usually sufficient. CI will run the full suite when you submit your pull request.
 
 You can run the full test suite with tox if you don't want to wait.
+
+* Install [pyenv](https://github.com/pyenv/pyenv-installer)
+
+* Install the supported Python Versions:
+```shell script
+$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|b|^2|^3\.[0-4])' | tac | sort -u -t'.' -k2,2`
+$ echo $PY_VERSIONS | xargs -n1 pyenv install
+$ pyenv global system $PY_VERSIONS
+```
+
 ```shell script
 $ tox
 ```
