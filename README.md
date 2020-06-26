@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/pypi/v/sidrapy.svg?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/sidrapy)](https://pypi.python.org/pypi/sidrapy)
 [![Python Version](https://img.shields.io/pypi/pyversions/sidrapy?style=flat)](https://pypi.python.org/pypi/sidrapy)
-[![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
+[![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](https://github.com/AlanTaranti/sidrapy/blob/master/LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/AlanTaranti/sidrapy/blob/master/CODE_OF_CONDUCT.md)
