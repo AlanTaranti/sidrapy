@@ -29,11 +29,11 @@ def random_args():
 def test_get_url():
     for _ in range(5_000):
         kwargs = random_args()
-        aux = sidrapy.resources.handler.get_url(**kwargs)
-        assert isinstance(aux, str)
-        assert aux.startswith("https://apisidra.ibge.gov.br/values/")
-        for __, v in kwargs.items():
-            assert v in aux
+        url = sidrapy.resources.handler.get_url(**kwargs)
+        assert isinstance(url, str)
+        assert url.startswith("https://apisidra.ibge.gov.br/values/")
+        for value in kwargs.values():
+            assert value in url
 
 
 def test_get_ok():
@@ -42,8 +42,8 @@ def test_get_ok():
     with patch("sidrapy.resources.handler.requests") as mock_request:
         kwargs = random_args()
         mock_request.get.return_value = mock_response
-        aux = sidrapy.resources.handler.get(**kwargs)
-        assert aux is mock_response.json()
+        response = sidrapy.resources.handler.get(**kwargs)
+        assert response is mock_response.json()
 
 
 def test_get_not_ok():
@@ -53,4 +53,4 @@ def test_get_not_ok():
         kwargs = random_args()
         mock_request.get.return_value = mock_response
         with pytest.raises(ValueError):
-            _ = sidrapy.resources.handler.get(**kwargs)
+            sidrapy.resources.handler.get(**kwargs)
