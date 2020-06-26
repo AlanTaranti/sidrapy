@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](LICENSE)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/AlanTaranti/sidrapy/blob/master/CODE_OF_CONDUCT.md)
 
 ## O que é esse projeto? / _What is this project?_
 
