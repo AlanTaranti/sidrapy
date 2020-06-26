@@ -1,7 +1,7 @@
 import random
-import uuid
 from unittest.mock import Mock
 from unittest.mock import patch
+from uuid import uuid4
 
 import pytest
 
@@ -19,7 +19,7 @@ def random_args():
         "period",
         "header",
     ]
-    kwargs = {k: str(uuid.uuid4()) for k in args}
+    kwargs = {k: str(uuid4()) for k in args}
     for arg in args[3:]:
         if random.random() < 0.5:
             del kwargs[arg]
