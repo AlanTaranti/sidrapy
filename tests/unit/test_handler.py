@@ -8,10 +8,6 @@ import pytest
 import sidrapy
 
 
-def test_dumb():
-    return
-
-
 def random_args():
     args = [
         "table_code",

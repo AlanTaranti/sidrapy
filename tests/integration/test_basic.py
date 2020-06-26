@@ -3,10 +3,6 @@ import requests
 import sidrapy.server
 
 
-def test_dumb():
-    return
-
-
 def test_connection():
     url = sidrapy.resources.handler.ENDPOINT_BASE
     r = requests.get(url, timeout=10)
