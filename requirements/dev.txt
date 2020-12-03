@@ -15,7 +15,7 @@ identify==1.4.19          # via pre-commit
 iniconfig==1.1.1          # via pytest
 nodeenv==1.4.0            # via pre-commit
 packaging==20.4           # via pytest, tox
-pip-tools==5.2.1          # via -r requirements/dev.in
+pip-tools==5.4.0          # via -r requirements/dev.in
 pluggy==0.13.1            # via pytest, tox
 pre-commit==2.5.1         # via -r requirements/dev.in
 py==1.8.2                 # via pytest, tox
