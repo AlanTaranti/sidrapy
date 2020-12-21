@@ -8,7 +8,7 @@ appdirs==1.4.4            # via virtualenv
 attrs==19.3.0             # via pytest
 cfgv==3.1.0               # via pre-commit
 click==7.1.2              # via pip-tools
-coverage==5.3             # via -r requirements/dev.in
+coverage==5.3.1           # via -r requirements/dev.in
 distlib==0.3.0            # via virtualenv
 filelock==3.0.12          # via tox, virtualenv
 identify==1.4.19          # via pre-commit
