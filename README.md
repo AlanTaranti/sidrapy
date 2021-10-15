@@ -22,10 +22,10 @@ _Sidrapy allows you to access data about housing, inflation, industries and many
 ## Versões Python Suportadas / _Supported Python Versions_
 
 Todas as versões do Python 3 oficialmente suportadas. Atualmente:
-- Python 3.5+
+- Python 3.6+
 
 _All officially supported Python 3 versions. Currently:_
-- _Python 3.5+_
+- _Python 3.6+_
 
 ## Como instalar e utilizar esse projeto? / _How to install and use this project?_
 
