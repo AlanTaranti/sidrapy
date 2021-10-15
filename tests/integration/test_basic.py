@@ -15,37 +15,96 @@ def test_sample_request():
     url += "/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y"
     r = requests.get(url, timeout=10)
     assert r.status_code == 200
-    sample_response = (
-        '[\r\n  {\r\n    "NC": "Nível Territorial (Código)",\r\n    "NN": '
-        '"Nível Territorial",\r\n    "D1C": "Ano (Código)",\r\n    "D1N": '
-        '"Ano",\r\n    "D2C": "Variável (Código)",\r\n    "D2N": "Variável'
-        '",\r\n    "D3C": "Brasil (Código)",\r\n    "D3N": "Brasil",\r\n  '
-        '  "D4C": "Produto das lavouras temporárias (Código)",\r\n    "D4N":'
-        ' "Produto das lavouras temporárias",\r\n    "MC": "Unidade de Medi'
-        'da (Código)",\r\n    "MN": "Unidade de Medida",\r\n    "V": "Valo'
-        'r"\r\n  },\r\n  {\r\n    "NC": "1",\r\n    "NN": "Brasil",\r\n   '
-        ' "D1C": "2018",\r\n    "D1N": "2018",\r\n    "D2C": "109",\r\n    '
-        '"D2N": "Área plantada",\r\n    "D3C": "1",\r\n    "D3N": "Brasil"'
-        ',\r\n    "D4C": "0",\r\n    "D4N": "Total",\r\n    "MC": "1006",'
-        '\r\n    "MN": "Hectares",\r\n    "V": "73230674"\r\n  },\r\n  {\r\n'
-        '    "NC": "1",\r\n    "NN": "Brasil",\r\n    "D1C": "2018",\r\n    '
-        '"D1N": "2018",\r\n    "D2C": "216",\r\n    "D2N": "Área colhida",'
-        '\r\n    "D3C": "1",\r\n    "D3N": "Brasil",\r\n    "D4C": "0",\r\n'
-        '    "D4N": "Total",\r\n    "MC": "1006",\r\n    "MN": "Hectares",'
-        '\r\n    "V": "72572833"\r\n  },\r\n  {\r\n    "NC": "1",\r\n    "'
-        'NN": "Brasil",\r\n    "D1C": "2018",\r\n    "D1N": "2018",\r\n   '
-        ' "D2C": "214",\r\n    "D2N": "Quantidade produzida",\r\n    "D3C"'
-        ': "1",\r\n    "D3N": "Brasil",\r\n    "D4C": "0",\r\n    "D4N": "'
-        'Total",\r\n    "MC": "1017",\r\n    "MN": "Toneladas",\r\n    "V"'
-        ': ".."\r\n  },\r\n  {\r\n    "NC": "1",\r\n    "NN": "Brasil",\r\n'
-        '    "D1C": "2018",\r\n    "D1N": "2018",\r\n    "D2C": "112",\r\n '
-        '   "D2N": "Rendimento médio da produção",\r\n    "D3C": "1",\r\n '
-        '   "D3N": "Brasil",\r\n    "D4C": "0",\r\n    "D4N": "Total",\r\n'
-        '    "MC": "33",\r\n    "MN": "Quilogramas por Hectare",\r\n    "V'
-        '": ".."\r\n  },\r\n  {\r\n    "NC": "1",\r\n    "NN": "Brasil",\r\n'
-        '    "D1C": "2018",\r\n    "D1N": "2018",\r\n    "D2C": "215",\r\n'
-        '    "D2N": "Valor da produção",\r\n    "D3C": "1",\r\n    "D3N": '
-        '"Brasil",\r\n    "D4C": "0",\r\n    "D4N": "Total",\r\n    "MC": '
-        '"40",\r\n    "MN": "Mil Reais",\r\n    "V": "282971642"\r\n  }\r\n]'
-    )
-    assert r.text == sample_response
+    sample_response = [
+        {
+            "NC": "Nível Territorial (Código)",
+            "NN": "Nível Territorial",
+            "MC": "Unidade de Medida (Código)",
+            "MN": "Unidade de Medida",
+            "V": "Valor",
+            "D1C": "Ano (Código)",
+            "D1N": "Ano",
+            "D2C": "Variável (Código)",
+            "D2N": "Variável",
+            "D3C": "Brasil (Código)",
+            "D3N": "Brasil",
+            "D4C": "Produto das lavouras temporárias (Código)",
+            "D4N": "Produto das lavouras temporárias",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1006",
+            "MN": "Hectares",
+            "V": "73274337",
+            "D1C": "2018",
+            "D1N": "2018",
+            "D2C": "109",
+            "D2N": "Área plantada",
+            "D3C": "1",
+            "D3N": "Brasil",
+            "D4C": "0",
+            "D4N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1006",
+            "MN": "Hectares",
+            "V": "72610755",
+            "D1C": "2018",
+            "D1N": "2018",
+            "D2C": "216",
+            "D2N": "Área colhida",
+            "D3C": "1",
+            "D3N": "Brasil",
+            "D4C": "0",
+            "D4N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1017",
+            "MN": "Toneladas",
+            "V": "..",
+            "D1C": "2018",
+            "D1N": "2018",
+            "D2C": "214",
+            "D2N": "Quantidade produzida",
+            "D3C": "1",
+            "D3N": "Brasil",
+            "D4C": "0",
+            "D4N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "33",
+            "MN": "Quilogramas por Hectare",
+            "V": "..",
+            "D1C": "2018",
+            "D1N": "2018",
+            "D2C": "112",
+            "D2N": "Rendimento médio da produção",
+            "D3C": "1",
+            "D3N": "Brasil",
+            "D4C": "0",
+            "D4N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "40",
+            "MN": "Mil Reais",
+            "V": "282953793",
+            "D1C": "2018",
+            "D1N": "2018",
+            "D2C": "215",
+            "D2N": "Valor da produção",
+            "D3C": "1",
+            "D3N": "Brasil",
+            "D4C": "0",
+            "D4N": "Total",
+        },
+    ]
+    assert r.json() == sample_response

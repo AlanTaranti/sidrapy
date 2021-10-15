@@ -113,9 +113,9 @@ Você pode executar o conjunto completo de testes com o tox, caso não queira es
 
 * Instale as versões do Python suportadas:
 ```shell script
-$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|b|^2|^3\.[0-4])' | tac | sort -u -t'.' -k2,2`
+$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-5]\.)' | tac | sort -u -t'.' -k2,2`
 $ echo $PY_VERSIONS | xargs -n1 pyenv install
-$ pyenv global system $PY_VERSIONS
+$ echo $PY_VERSIONS | xargs pyenv local
 ```
 
 * Execute o tox:
