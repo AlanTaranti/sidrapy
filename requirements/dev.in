@@ -3,3 +3,7 @@ pip-tools
 pre-commit
 tox
 coverage
+
+# docs
+sphinx
+furo
