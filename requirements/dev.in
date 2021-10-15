@@ -1,9 +1,7 @@
 -r tests.in
+-r dev.in
+
 pip-tools
 pre-commit
 tox
 coverage
-
-# docs
-sphinx
-furo
