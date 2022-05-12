@@ -1,5 +1,6 @@
+-r exec.in
 -r tests.in
--r dev.in
+-r docs.in
 
 pip-tools
 pre-commit
