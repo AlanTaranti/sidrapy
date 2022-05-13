@@ -10,6 +10,7 @@ def get_table(
     variable: str = None,
     classification: str = None,
     categories: str = None,
+    classifications: dict[str, str] = None,
     period: str = None,
     header: str = None,
     format: str = "pandas",
@@ -21,6 +22,7 @@ def get_table(
         variable,
         classification,
         categories,
+        classifications,
         period,
         header,
     )
