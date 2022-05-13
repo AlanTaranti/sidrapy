@@ -75,5 +75,5 @@ Suporte / _Support:_
 * [Grupo Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
 
 Mantenedor / _Maintainer_:
-* Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
-* Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
+* Email: [contato@alantaranti.me](mailto:contato@alantaranti.me)
+* Website: <a href="https://alantaranti.me" target="_blank">alantaranti.me</a>
