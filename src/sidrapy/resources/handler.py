@@ -1,3 +1,5 @@
+from typing import Dict
+
 import requests
 
 ENDPOINT_BASE = "https://apisidra.ibge.gov.br"
@@ -10,6 +12,7 @@ def get_url(
     variable: str = None,
     classification: str = None,
     categories: str = None,
+    classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
 ):
@@ -28,11 +31,17 @@ def get_url(
     if variable:
         query_url += f"/v/{variable}"
 
-    if classification:
-        query_url += f"/c{classification}"
+    if classifications is not None and classifications != "":
+        for key, value in classifications.items():
+            query_url += f"/c{key}"
+            query_url += f"/{value}"
 
-    if categories:
-        query_url += f"/{categories}"
+    else:
+        if classification:
+            query_url += f"/c{classification}"
+
+            if categories:
+                query_url += f"/{categories}"
 
     return query_url
 
@@ -44,6 +53,7 @@ def get(
     variable: str = None,
     classification: str = None,
     categories: str = None,
+    classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
 ):
@@ -54,6 +64,7 @@ def get(
         variable,
         classification,
         categories,
+        classifications,
         period,
         header,
     )
