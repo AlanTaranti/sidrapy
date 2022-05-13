@@ -4,8 +4,7 @@ from unittest.mock import patch
 from uuid import uuid4
 
 import pytest
-
-import sidrapy
+from src import sidrapy
 
 
 def random_args():
@@ -39,7 +38,7 @@ def test_get_url():
 def test_get_ok():
     mock_response = Mock()
     mock_response.ok = True
-    with patch("sidrapy.resources.handler.requests") as mock_request:
+    with patch("src.sidrapy.resources.handler.requests") as mock_request:
         kwargs = random_args()
         mock_request.get.return_value = mock_response
         response = sidrapy.resources.handler.get(**kwargs)
@@ -49,7 +48,7 @@ def test_get_ok():
 def test_get_not_ok():
     mock_response = Mock()
     mock_response.ok = False
-    with patch("sidrapy.resources.handler.requests") as mock_request:
+    with patch("src.sidrapy.resources.handler.requests") as mock_request:
         kwargs = random_args()
         mock_request.get.return_value = mock_response
         with pytest.raises(ValueError):
