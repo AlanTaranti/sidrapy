@@ -45,12 +45,6 @@ pip install -U sidrapy
 Aqui um exemplo de como utilizar essa biblioteca.
 Digamos que desejamos os dados do IPCA dos ultimos 12 meses.
 
-```python
-import sidrapy
-
-data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
-```
-
 _Here is an example of how to use this library._
 _Let's assume that we want the IPCA from Brazil from last 12 months._
 
