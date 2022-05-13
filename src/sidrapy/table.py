@@ -1,3 +1,5 @@
+from typing import Dict
+
 import pandas as pd
 
 from .resources import get
@@ -10,6 +12,7 @@ def get_table(
     variable: str = None,
     classification: str = None,
     categories: str = None,
+    classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
     format: str = "pandas",
@@ -21,6 +24,7 @@ def get_table(
         variable,
         classification,
         categories,
+        classifications,
         period,
         header,
     )

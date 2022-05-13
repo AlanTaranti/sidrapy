@@ -4,9 +4,9 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/sidrapy)](https://pypi.python.org/pypi/sidrapy)
 [![Python Version](https://img.shields.io/pypi/pyversions/sidrapy?style=flat)](https://pypi.python.org/pypi/sidrapy)
 [![License](https://img.shields.io/github/license/AlanTaranti/Sidrapy)](https://github.com/AlanTaranti/sidrapy/blob/master/LICENSE)
-![Maintenance](https://img.shields.io/maintenance/yes/2020)
+![Maintenance](https://img.shields.io/maintenance/yes/2022)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/AlanTaranti/sidrapy/blob/master/CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/AlanTaranti/sidrapy/blob/master/CODE_OF_CONDUCT.md)
 
 ## O que é esse projeto? / _What is this project?_
 
@@ -22,10 +22,10 @@ _Sidrapy allows you to access data about housing, inflation, industries and many
 ## Versões Python Suportadas / _Supported Python Versions_
 
 Todas as versões do Python 3 oficialmente suportadas. Atualmente:
-- Python 3.6+
+- Python 3.7+
 
 _All officially supported Python 3 versions. Currently:_
-- _Python 3.6+_
+- _Python 3.7+_
 
 ## Como instalar e utilizar esse projeto? / _How to install and use this project?_
 
@@ -44,12 +44,6 @@ pip install -U sidrapy
 
 Aqui um exemplo de como utilizar essa biblioteca.
 Digamos que desejamos os dados do IPCA dos ultimos 12 meses.
-
-```python
-import sidrapy
-
-data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
-```
 
 _Here is an example of how to use this library._
 _Let's assume that we want the IPCA from Brazil from last 12 months._
@@ -75,5 +69,5 @@ Suporte / _Support:_
 * [Grupo Telegram](https://t.me/joinchat/AmdQix1KKeZ5KGpsKVFsKw)
 
 Mantenedor / _Maintainer_:
-* Email: [alan.taranti@gmail.com](mailto:alan.taranti@gmail.com)
-* Website: <a href="http://alantaranti.github.io" target="_blank">alantaranti.github.io</a>
+* Email: [contato@alantaranti.me](mailto:contato@alantaranti.me)
+* Website: <a href="https://alantaranti.me" target="_blank">alantaranti.me</a>

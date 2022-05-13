@@ -1,6 +1,5 @@
 import requests
-
-import sidrapy
+from src import sidrapy
 
 
 def test_connection():
@@ -108,3 +107,174 @@ def test_sample_request():
         },
     ]
     assert r.json() == sample_response
+
+
+def test_single_classification():
+    data = sidrapy.get_table(
+        table_code="5459",
+        territorial_level="1",
+        ibge_territorial_code="all",
+        classification="11278",
+        categories="39324",
+        period="202002",
+        format="list",
+    )
+
+    expected_response = [
+        {
+            "NC": "Nível Territorial (Código)",
+            "NN": "Nível Territorial",
+            "MC": "Unidade de Medida (Código)",
+            "MN": "Unidade de Medida",
+            "V": "Valor",
+            "D1C": "Brasil (Código)",
+            "D1N": "Brasil",
+            "D2C": "Semestre (Código)",
+            "D2N": "Semestre",
+            "D3C": "Grupos de capacidade útil (Código)",
+            "D3N": "Grupos de capacidade útil",
+            "D4C": "Variável (Código)",
+            "D4N": "Variável",
+            "D5C": "Tipo de unidade armazenadora (Código)",
+            "D5N": "Tipo de unidade armazenadora",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1020",
+            "MN": "Unidades",
+            "V": "6731",
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "39324",
+            "D3N": "Total",
+            "D4C": "152",
+            "D4N": "Número de estabelecimentos",
+            "D5C": "114630",
+            "D5N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1017",
+            "MN": "Toneladas",
+            "V": "153406525",
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "39324",
+            "D3N": "Total",
+            "D4C": "153",
+            "D4N": "Capacidade útil",
+            "D5C": "114630",
+            "D5N": "Total",
+        },
+    ]
+
+    assert data == expected_response
+
+
+def test_multiple_classification():
+    data = sidrapy.get_table(
+        table_code="5459",
+        territorial_level="1",
+        ibge_territorial_code="all",
+        classifications={"11278": "33460", "166": "3067,3327"},
+        period="202002",
+        format="list",
+    )
+
+    print(data)
+
+    expected_response = [
+        {
+            "D1C": "Brasil (Código)",
+            "D1N": "Brasil",
+            "D2C": "Semestre (Código)",
+            "D2N": "Semestre",
+            "D3C": "Grupos de capacidade útil (Código)",
+            "D3N": "Grupos de capacidade útil",
+            "D4C": "Tipo de unidade armazenadora (Código)",
+            "D4N": "Tipo de unidade armazenadora",
+            "D5C": "Variável (Código)",
+            "D5N": "Variável",
+            "MC": "Unidade de Medida (Código)",
+            "MN": "Unidade de Medida",
+            "NC": "Nível Territorial (Código)",
+            "NN": "Nível Territorial",
+            "V": "Valor",
+        },
+        {
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "33460",
+            "D3N": "menos de 1.200 toneladas",
+            "D4C": "3067",
+            "D4N": "Armazéns graneleiros e granelizados",
+            "D5C": "152",
+            "D5N": "Número de estabelecimentos",
+            "MC": "1020",
+            "MN": "Unidades",
+            "NC": "1",
+            "NN": "Brasil",
+            "V": "185",
+        },
+        {
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "33460",
+            "D3N": "menos de 1.200 toneladas",
+            "D4C": "3067",
+            "D4N": "Armazéns graneleiros e granelizados",
+            "D5C": "153",
+            "D5N": "Capacidade útil",
+            "MC": "1017",
+            "MN": "Toneladas",
+            "NC": "1",
+            "NN": "Brasil",
+            "V": "100870",
+        },
+        {
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "33460",
+            "D3N": "menos de 1.200 toneladas",
+            "D4C": "3327",
+            "D4N": "Silos",
+            "D5C": "152",
+            "D5N": "Número de estabelecimentos",
+            "MC": "1020",
+            "MN": "Unidades",
+            "NC": "1",
+            "NN": "Brasil",
+            "V": "245",
+        },
+        {
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "33460",
+            "D3N": "menos de 1.200 toneladas",
+            "D4C": "3327",
+            "D4N": "Silos",
+            "D5C": "153",
+            "D5N": "Capacidade útil",
+            "MC": "1017",
+            "MN": "Toneladas",
+            "NC": "1",
+            "NN": "Brasil",
+            "V": "141615",
+        },
+    ]
+
+    assert data == expected_response

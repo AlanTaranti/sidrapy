@@ -1,0 +1,4 @@
+# Requisitos de Execução de Desenvolvimento
+
+https://github.com/pandas-dev/pandas/archive/master.tar.gz#egg=pandas
+https://github.com/psf/requests/archive/master.tar.gz#egg=requests

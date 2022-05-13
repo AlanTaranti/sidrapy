@@ -1,0 +1,10 @@
+# Requisitos de Desenvolvimento
+
+-r execution.in
+-r tests.in
+-r documentation.in
+
+pip-tools
+pre-commit
+tox
+coverage

@@ -59,7 +59,7 @@ On Windows, activating is different.
 
 * Install sidrapy in editable mode with development dependencies.
 ```shell script
-$ pip install -e . -r requirements/dev.txt
+$ pip install -e . -r requirements/development.txt
 ```
 
 * Optional: Install the pre-commit hooks.
@@ -103,12 +103,13 @@ You can run the full test suite with tox if you don't want to wait.
 
 * Install the supported Python Versions:
 ```shell script
-$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|b|^2|^3\.[0-4])' | tac | sort -u -t'.' -k2,2`
+$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-6]\.)' | tac | sort -u -t'.' -k2,2`
 $ echo $PY_VERSIONS | xargs -n1 pyenv install
-$ pyenv global system $PY_VERSIONS
 ```
 
 ```shell script
+$ PY_VERSIONS=`pyenv versions | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-6]\.)'`
+$ echo $PY_VERSIONS | xargs pyenv local
 $ tox
 ```
 
