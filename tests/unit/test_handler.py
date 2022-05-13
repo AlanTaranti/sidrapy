@@ -1,3 +1,4 @@
+from typing import Dict
 from random import randint, random
 from unittest.mock import Mock
 from unittest.mock import patch
@@ -29,7 +30,7 @@ def random_args_classification():
     return kwargs
 
 
-def get_random_classifications() -> dict[str, str]:
+def get_random_classifications() -> Dict[str, str]:
     classifications = {}
     for _ in range(randint(0, 10)):
         categories = [str(uuid4()) for __ in range(randint(0, 10))]

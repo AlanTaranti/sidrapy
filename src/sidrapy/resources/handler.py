@@ -1,3 +1,5 @@
+from typing import Dict
+
 import requests
 
 ENDPOINT_BASE = "https://apisidra.ibge.gov.br"
@@ -10,7 +12,7 @@ def get_url(
     variable: str = None,
     classification: str = None,
     categories: str = None,
-    classifications: dict[str, str] = None,
+    classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
 ):
@@ -51,7 +53,7 @@ def get(
     variable: str = None,
     classification: str = None,
     categories: str = None,
-    classifications: dict[str, str] = None,
+    classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
 ):
