@@ -65,7 +65,7 @@ No Windows, ativar o virtualenv é diferente.
 
 * Instale o sidrapy no modo editável com as dependências de desenvolvimento.
 ```shell script
-$ pip install -e . -r requirements/dev.txt
+$ pip install -e . -r requirements/development.txt
 ```
 
 * Opcional: Instale os hooks pre-commit.
@@ -113,13 +113,14 @@ Você pode executar o conjunto completo de testes com o tox, caso não queira es
 
 * Instale as versões do Python suportadas:
 ```shell script
-$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-5]\.)' | tac | sort -u -t'.' -k2,2`
+$ PY_VERSIONS=`pyenv install -l | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-6]\.)' | tac | sort -u -t'.' -k2,2`
 $ echo $PY_VERSIONS | xargs -n1 pyenv install
-$ echo $PY_VERSIONS | xargs pyenv local
 ```
 
 * Execute o tox:
 ```shell script
+$ PY_VERSIONS=`pyenv versions | awk '{$1=$1};1' | egrep -v '(-|r|^2|^3\.[0-6]\.)'`
+$ echo $PY_VERSIONS | xargs pyenv local
 $ tox
 ```
 

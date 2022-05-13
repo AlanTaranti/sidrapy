@@ -1,6 +1,5 @@
 import requests
-
-import sidrapy
+from src import sidrapy
 
 
 def test_connection():
