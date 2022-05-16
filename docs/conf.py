@@ -11,6 +11,7 @@
 #
 import os
 import sys
+from datetime import date
 
 sys.path.insert(0, os.path.abspath(".."))
 
@@ -20,8 +21,8 @@ from src.sidrapy import VERSION  # noqa: E402
 # -- Project information -----------------------------------------------------
 
 project = "sidrapy"
-copyright = "2021, Alan Taranti"
-author = "Alan Taranti"
+author = "sidrapy developers"
+copyright = "2020 - {}, {} (MIT License)".format(date.today().year, author)
 
 # The short X.Y version
 version = VERSION
@@ -126,7 +127,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "sidrapy.tex", "sidrapy Documentation", "Alan Taranti", "manual"),
+    (master_doc, "sidrapy.tex", "sidrapy Documentation", "manual"),
 ]
 
 
@@ -134,7 +135,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "sidrapy", "sidrapy Documentation", [author], 1)]
+man_pages = [(master_doc, project, "{} Documentation".format(project), author, 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -148,9 +149,6 @@ texinfo_documents = [
         "sidrapy",
         "sidrapy Documentation",
         author,
-        "sidrapy",
-        "One line description of project.",
-        "Miscellaneous",
     ),
 ]
 
