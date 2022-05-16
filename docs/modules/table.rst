@@ -1,4 +1,4 @@
-.. modulos-get_table:
+.. modulos-table:
 
 ==========
 Table
