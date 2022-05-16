@@ -35,9 +35,9 @@ Módulos
    :caption: Módulos
    :hidden:
 
-   modules/get_table
+   modules/table
 
-:doc:`modules/get_table`
+:doc:`modules/table`
     Obter tabelas do SIDRA.
 
 

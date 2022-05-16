@@ -1,5 +1,5 @@
 """
-.. module:: Get Table
+.. module:: Table
    :synopsis: Interage com as tabelas do SIDRA.
 """
 

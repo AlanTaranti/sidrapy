@@ -1,7 +1,7 @@
 .. modulos-get_table:
 
 ==========
-get_table
+Table
 ==========
 
 .. automodule:: src.sidrapy.table
