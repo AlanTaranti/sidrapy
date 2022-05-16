@@ -59,6 +59,11 @@ Aqui: http://api.sidra.ibge.gov.br/home/ajuda
 
 _Here: http://api.sidra.ibge.gov.br/home/ajuda (brazilian portuguese)_
 
+### E onde está a documentação do sidrapy? / _How about the sidrapy documentation?_
+Aqui: https://sidrapy.readthedocs.io
+
+_Here: https://sidrapy.readthedocs.io (brazilian portuguese)_
+
 ### Contribuindo / _Contributing_
 Para obter orientações sobre como configurar o ambiente de desenvolvimento e como fazer uma contribuição para o sidrapy, consulte o [guia de contribuição](https://github.com/AlanTaranti/sidrapy/blob/master/CONTRIBUTING.md).
 
