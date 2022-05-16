@@ -11,9 +11,9 @@ Essa ferramenta permite acessar facilmente em Python dados sobre habitação, in
 Instalação
 ==========
 
-O sidrapy roda em Python 3.6 ou superior.
+O sidrapy roda em Python 3.7 ou superior.
 
-Para instalar o Lomapy com o pip::
+Para instalar o sidrapy com o pip::
 
    pip install -U sidrapy
 
@@ -36,7 +36,7 @@ Quera ajudar a melhorar o sidrapy? Contribua com o código e/ou reporte algum pr
 - `Rastreador de Problemas`_
 - `Código Fonte`_
 
-.. _Rastreador de Problemas: https://github.com/AlanTaranti/Lomapy/issues
+.. _Rastreador de Problemas: https://github.com/AlanTaranti/sidrapy/issues
 .. _Código Fonte: https://github.com/AlanTaranti/sidrapy
 
 Como entrar em contato?
