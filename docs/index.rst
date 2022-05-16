@@ -13,7 +13,7 @@ Instalação
 
 O sidrapy roda em Python 3.7 ou superior.
 
-Para instalar o sidrapy com o pip::
+Para instalar o sidrapy com o pip ::
 
    pip install -U sidrapy
 
@@ -21,11 +21,24 @@ Início Rápido
 =============
 
 Aqui um exemplo de como utilizar essa biblioteca.
-Digamos que desejamos os dados do IPCA dos ultimos 12 meses.
+Digamos que desejamos os dados do IPCA dos ultimos 12 meses ::
 
    import sidrapy
 
    data = sidrapy.get_table(table_code="1419", territorial_level="1", ibge_territorial_code="all", period="last 12")
+
+
+Módulos
+=======
+
+.. toctree::
+   :caption: Módulos
+   :hidden:
+
+   modules/get_table
+
+:doc:`modules/get_table`
+    Obter tabelas do SIDRA.
 
 
 Contribua
