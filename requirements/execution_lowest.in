@@ -1,4 +1,4 @@
 # Requisitos de Execução com bibliotecas em versão mínima suportada
 
-pandas==1.3.4
+pandas==1.4.2
 requests==2.27.0
