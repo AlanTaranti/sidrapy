@@ -69,7 +69,7 @@ def get(
         header,
     )
 
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
 
     if not response.ok:
         raise ValueError(response.text)
