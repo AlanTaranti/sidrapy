@@ -21,6 +21,7 @@ def get_table(
     period: str = None,
     header: str = None,
     format: str = "pandas",
+    verify_ssl: bool = True,
 ):
     """Realiza a busca da tabela no SIDRA
 
@@ -61,6 +62,9 @@ def get_table(
         Opções:
             - 'pandas' - Retorna uma pandas Dataframe
             - 'list' - Retorna uma lista
+
+    verify_ssl : bool, optional (padrão=True)
+        Habilita/Desabilita a verificação ssl
 
     Returns
     -------
@@ -130,6 +134,7 @@ def get_table(
         classifications,
         period,
         header,
+        verify_ssl,
     )
 
     if format == "pandas":

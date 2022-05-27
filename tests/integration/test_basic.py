@@ -4,7 +4,7 @@ from src import sidrapy
 
 def test_connection():
     url = sidrapy.resources.handler.ENDPOINT_BASE
-    r = requests.get(url, timeout=10)
+    r = requests.get(url, timeout=10, verify=False)
     assert r.status_code == 200
 
 
@@ -12,7 +12,7 @@ def test_sample_request():
     url = sidrapy.resources.handler.ENDPOINT_BASE
     # api docs here: http://api.sidra.ibge.gov.br/home/ajuda
     url += "/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y"
-    r = requests.get(url, timeout=10)
+    r = requests.get(url, timeout=10, verify=False)
     assert r.status_code == 200
     sample_response = [
         {
@@ -118,6 +118,7 @@ def test_single_classification():
         categories="39324",
         period="202002",
         format="list",
+        verify_ssl=False,
     )
 
     expected_response = [
@@ -185,6 +186,7 @@ def test_multiple_classification():
         classifications={"11278": "33460", "166": "3067,3327"},
         period="202002",
         format="list",
+        verify_ssl=False,
     )
 
     print(data)

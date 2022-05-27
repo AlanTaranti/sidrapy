@@ -56,6 +56,7 @@ def get(
     classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
+    verify_ssl: bool = True,
 ):
     url = get_url(
         table_code,
@@ -69,7 +70,7 @@ def get(
         header,
     )
 
-    response = requests.get(url)
+    response = requests.get(url, verify=verify_ssl)
 
     if not response.ok:
         raise ValueError(response.text)
