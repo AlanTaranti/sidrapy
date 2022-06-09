@@ -16,7 +16,7 @@ charset-normalizer==2.0.12
     # via requests
 docutils==0.17.1
     # via sphinx
-furo==2022.4.7
+furo==2022.6.4.1
     # via -r requirements/documentation.in
 idna==3.3
     # via requests
@@ -56,6 +56,9 @@ sphinx==4.5.0
     # via
     #   -r requirements/documentation.in
     #   furo
+    #   sphinx-basic-ng
+sphinx-basic-ng==0.0.1a11
+    # via furo
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
