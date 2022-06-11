@@ -44,7 +44,7 @@ pytz==2022.1
     # via
     #   babel
     #   pandas
-requests==2.27.1
+requests==2.28.0
     # via sphinx
 six==1.16.0
     # via python-dateutil
