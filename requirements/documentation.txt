@@ -16,7 +16,7 @@ charset-normalizer==2.0.12
     # via requests
 docutils==0.17.1
     # via sphinx
-furo==2022.6.4.1
+furo==2022.6.21
     # via -r requirements/documentation.in
 idna==3.3
     # via requests
