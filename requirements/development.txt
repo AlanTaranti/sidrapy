@@ -56,7 +56,7 @@ packaging==21.3
     #   pytest
     #   sphinx
     #   tox
-pandas==1.4.2
+pandas==1.4.3
     # via
     #   -r requirements/documentation.in
     #   -r requirements/execution.in
