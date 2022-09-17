@@ -1,10 +1,7 @@
 from typing import Dict
 from random import randint, random
-from unittest.mock import Mock, MagicMock
-from unittest.mock import patch
 from uuid import uuid4
 
-import pytest
 from src import sidrapy
 
 
