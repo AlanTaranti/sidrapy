@@ -3,7 +3,7 @@ Changelog
 
 v0.1.4 - 2022-09-18
 ----------------------------------------
-- Fix [#88](https://github.com/AlanTaranti/sidrapy/issues/88) - Fixed connection to IBGE service, that don't support [RFC 5746](https://www.rfc-editor.org/rfc/rfc5746)
+- Fix [#88](https://github.com/AlanTaranti/sidrapy/issues/88) - Fixed connection to IBGE service, that don't support [RFC 5746](https://www.rfc-editor.org/rfc/rfc5746) - Obrigado [@nicmorais](https://github.com/nicmorais)
 
 v0.1.3 - 2022-05-26
 ----------------------------------------
