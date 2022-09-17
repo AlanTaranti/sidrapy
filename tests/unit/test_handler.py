@@ -1,6 +1,6 @@
 from typing import Dict
 from random import randint, random
-from unittest.mock import Mock
+from unittest.mock import Mock, MagicMock
 from unittest.mock import patch
 from uuid import uuid4
 
@@ -82,23 +82,3 @@ def test_get_url():
                 for k, v in value.items():
                     assert k in url
                     assert v in url
-
-
-def test_get_ok():
-    mock_response = Mock()
-    mock_response.ok = True
-    with patch("src.sidrapy.resources.handler.requests") as mock_request:
-        kwargs = random_args_classification()
-        mock_request.get.return_value = mock_response
-        response = sidrapy.resources.handler.get(**kwargs)
-        assert response is mock_response.json()
-
-
-def test_get_not_ok():
-    mock_response = Mock()
-    mock_response.ok = False
-    with patch("src.sidrapy.resources.handler.requests") as mock_request:
-        kwargs = random_args_classification()
-        mock_request.get.return_value = mock_response
-        with pytest.raises(ValueError):
-            sidrapy.resources.handler.get(**kwargs)
