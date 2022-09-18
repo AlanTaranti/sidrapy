@@ -1,6 +1,6 @@
 from typing import Dict
 
-import requests
+from .http_client import HttpClient
 
 ENDPOINT_BASE = "https://apisidra.ibge.gov.br"
 
@@ -56,7 +56,6 @@ def get(
     classifications: Dict[str, str] = None,
     period: str = None,
     header: str = None,
-    verify_ssl: bool = True,
 ):
     url = get_url(
         table_code,
@@ -70,7 +69,8 @@ def get(
         header,
     )
 
-    response = requests.get(url, verify=verify_ssl)
+    with HttpClient.get_legacy_session() as session:
+        response = session.get(url)
 
     if not response.ok:
         raise ValueError(response.text)

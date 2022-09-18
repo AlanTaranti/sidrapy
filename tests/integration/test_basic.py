@@ -1,10 +1,11 @@
-import requests
 from src import sidrapy
+from src.sidrapy.resources.http_client import HttpClient
 
 
 def test_connection():
     url = sidrapy.resources.handler.ENDPOINT_BASE
-    r = requests.get(url, timeout=10, verify=False)
+    with HttpClient.get_legacy_session() as session:
+        r = session.get(url, timeout=10)
     assert r.status_code == 200
 
 
@@ -12,7 +13,8 @@ def test_sample_request():
     url = sidrapy.resources.handler.ENDPOINT_BASE
     # api docs here: http://api.sidra.ibge.gov.br/home/ajuda
     url += "/values/t/1612/p/2018/v/allxp/n1/1/d/m/h/y"
-    r = requests.get(url, timeout=10, verify=False)
+    with HttpClient.get_legacy_session() as session:
+        r = session.get(url, timeout=10)
     assert r.status_code == 200
     sample_response = [
         {
@@ -118,7 +120,74 @@ def test_single_classification():
         categories="39324",
         period="202002",
         format="list",
-        verify_ssl=False,
+    )
+
+    expected_response = [
+        {
+            "NC": "Nível Territorial (Código)",
+            "NN": "Nível Territorial",
+            "MC": "Unidade de Medida (Código)",
+            "MN": "Unidade de Medida",
+            "V": "Valor",
+            "D1C": "Brasil (Código)",
+            "D1N": "Brasil",
+            "D2C": "Semestre (Código)",
+            "D2N": "Semestre",
+            "D3C": "Grupos de capacidade útil (Código)",
+            "D3N": "Grupos de capacidade útil",
+            "D4C": "Variável (Código)",
+            "D4N": "Variável",
+            "D5C": "Tipo de unidade armazenadora (Código)",
+            "D5N": "Tipo de unidade armazenadora",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1020",
+            "MN": "Unidades",
+            "V": "6731",
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "39324",
+            "D3N": "Total",
+            "D4C": "152",
+            "D4N": "Número de estabelecimentos",
+            "D5C": "114630",
+            "D5N": "Total",
+        },
+        {
+            "NC": "1",
+            "NN": "Brasil",
+            "MC": "1017",
+            "MN": "Toneladas",
+            "V": "153406525",
+            "D1C": "1",
+            "D1N": "Brasil",
+            "D2C": "202002",
+            "D2N": "2º semestre 2020",
+            "D3C": "39324",
+            "D3N": "Total",
+            "D4C": "153",
+            "D4N": "Capacidade útil",
+            "D5C": "114630",
+            "D5N": "Total",
+        },
+    ]
+
+    assert data == expected_response
+
+
+def test_single_classification():
+    data = sidrapy.get_table(
+        table_code="5459",
+        territorial_level="1",
+        ibge_territorial_code="all",
+        classification="11278",
+        categories="39324",
+        period="202002",
+        format="list",
     )
 
     expected_response = [
@@ -186,7 +255,6 @@ def test_multiple_classification():
         classifications={"11278": "33460", "166": "3067,3327"},
         period="202002",
         format="list",
-        verify_ssl=False,
     )
 
     print(data)
