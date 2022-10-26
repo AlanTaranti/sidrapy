@@ -28,6 +28,8 @@ distlib==0.3.4
     # via virtualenv
 docutils==0.17.1
     # via sphinx
+exceptiongroup==1.0.0rc9
+    # via pytest
 filelock==3.6.0
     # via
     #   tox
@@ -73,16 +75,14 @@ pluggy==1.0.0
 pre-commit==2.20.0
     # via -r requirements/development.in
 py==1.11.0
-    # via
-    #   pytest
-    #   tox
+    # via tox
 pygments==2.12.0
     # via
     #   furo
     #   sphinx
 pyparsing==3.0.9
     # via packaging
-pytest==7.1.2
+pytest==7.2.0
     # via -r requirements/tests.in
 python-dateutil==2.8.2
     # via pandas
