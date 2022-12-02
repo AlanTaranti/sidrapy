@@ -62,7 +62,7 @@ pandas==1.4.2
     #   -r requirements/execution.in
 pep517==0.12.0
     # via build
-pip-tools==6.8.0
+pip-tools==6.11.0
     # via -r requirements/development.in
 platformdirs==2.5.2
     # via virtualenv
@@ -130,7 +130,6 @@ toml==0.10.2
     #   tox
 tomli==2.0.1
     # via
-    #   build
     #   pep517
     #   pytest
 tox==3.25.1
