@@ -22,7 +22,7 @@ charset-normalizer==2.0.12
     # via requests
 click==8.1.3
     # via pip-tools
-coverage==6.4.1
+coverage==7.0.5
     # via -r requirements/development.in
 distlib==0.3.4
     # via virtualenv
@@ -130,7 +130,6 @@ toml==0.10.2
     #   tox
 tomli==2.0.1
     # via
-    #   build
     #   pep517
     #   pytest
 tox==3.25.1
