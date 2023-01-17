@@ -73,16 +73,14 @@ pluggy==1.0.0
 pre-commit==2.20.0
     # via -r requirements/development.in
 py==1.11.0
-    # via
-    #   pytest
-    #   tox
+    # via tox
 pygments==2.12.0
     # via
     #   furo
     #   sphinx
 pyparsing==3.0.9
     # via packaging
-pytest==7.1.2
+pytest==7.2.1
     # via -r requirements/tests.in
 python-dateutil==2.8.2
     # via pandas
@@ -129,10 +127,7 @@ toml==0.10.2
     #   pre-commit
     #   tox
 tomli==2.0.1
-    # via
-    #   build
-    #   pep517
-    #   pytest
+    # via pep517
 tox==3.25.1
     # via -r requirements/development.in
 urllib3==1.26.9
