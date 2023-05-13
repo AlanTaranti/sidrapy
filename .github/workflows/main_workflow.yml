@@ -1,0 +1,48 @@
+name: Main Workflow
+on: ['push', 'pull_request', 'workflow_dispatch']
+jobs:
+  automated-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-20.04, ubuntu-22.04]
+        python-version: ['3.7', '3.8', '3.9', '3.10']
+
+    name: Setup python ${{ matrix.python-version }} on ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event"
+      - run: echo "This job is now running on a ${{ runner.os }} server"
+      - run: echo "The name of the branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Validate python version
+        run: |
+          pythonVersion=$(python --version 2>&1)
+          if [[ $pythonVersion == "Python ${{ matrix.python-version }}"* ]];
+          then
+            echo "The current version is $pythonVersion."
+          else
+            echo "The current version is $pythonVersion; expected version is ${{ matrix.python-version }}"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -e . -r requirements/development.txt
+
+      - name: Run unit tests
+        run: |
+          source .venv/bin/activate
+          pytest
