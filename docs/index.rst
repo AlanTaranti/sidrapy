@@ -11,7 +11,7 @@ Essa ferramenta permite acessar facilmente em Python dados sobre habitação, in
 Instalação
 ==========
 
-O sidrapy roda em Python 3.7 ou superior.
+O sidrapy roda em Python 3.8 ou superior.
 
 Para instalar o sidrapy com o pip ::
 
